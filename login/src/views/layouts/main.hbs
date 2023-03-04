@@ -1,0 +1,61 @@
+<!-- Creamos archivo html -->
+<!DOCTYPE html>
+<html lang="en">
+   <!--Se crea un head-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título del contenido-->
+    <title>Login Node.js MySql</title>
+    <!-- Tailwind CSS Link -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.1/tailwind.min.css">
+    <!-- Fontawesome Link -->
+    <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css" crossorigin="anonymous">
+    <script src="js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+  </head>
+<!--Abrimos un body-->
+  <body class="bg-gray-200">
+    <nav class="flex py-5 bg-lavender-500 text-black px-30">
+      <div class="w-1/2 px-12 mr-auto">
+       <!--Script bootstrap pack-->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+      <!-- Imagen para el icon de la tienda -->
+      <img class="img-fluid" src="https://cdn-icons-png.flaticon.com/512/776/776645.png" width="80px" height="80px" />
+      <!-- H1 para nombrar al sistema -->
+        <h1 class="text-3xl font-bold">SISTEMA "EL TÍO"</h1>
+      </div>
+      <ul class="w-1/2 px-16 ml-auto flex justify-end pt-1">
+         <!--Se crea una condicion para name-->
+        {{#if name}}
+          <li class="nav-item px-4">
+            <a href="/logout" class="nav-link font-semibold bg-red-500 hover:bg-red-700 py-3 px-4 rounded-md">Logout</a>
+          </li>
+           <!--Se cierra el name-->
+          <p>{{name}}</p>
+         <!--Else si no cumple el name-->
+        {{else}}
+        <li class="nav-item px-4">
+            <!--Loyout de inicio-->
+            <a href="/" class="nav-link font-semibold border-2 border-white hover:bg-white hover:text-green-700 py-3
+              px-4 rounded-md">Inicio</a>
+          </li>
+          <li class="nav-item px-4">
+             <!--Loyout de registro-->
+            <a href="/register" class="nav-link font-semibold border-2 border-white hover:bg-white hover:text-green-700 py-3
+              px-4 rounded-md">Registro</a>
+          </li>
+         <!--Se cierra eln if-->
+        {{/if}}
+      </ul>
+    </nav>
+     <!--Se cierra condicion body-->
+    {{{body}}}
+  <!--Se cierra el body-->
+  </body>
+<!--Cerramos el html-->
+</html>
